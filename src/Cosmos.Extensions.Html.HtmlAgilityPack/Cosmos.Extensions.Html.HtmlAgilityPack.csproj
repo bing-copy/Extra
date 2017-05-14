@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net451;netstandard1.6</TargetFrameworks>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <PackageTargetFallback Condition=" '$(TargetFramework)' == 'netstandard1.6' ">$(PackageTargetFallback);dotnet5.6;dnxcore50;portable-net45+win8</PackageTargetFallback>
+    <NetStandardImplicitPackageVersion Condition=" '$(TargetFramework)' == 'netstandard1.6' ">1.6.1</NetStandardImplicitPackageVersion>
+    <AssemblyVersion>0.0.1</AssemblyVersion>
+    <Copyright />
+    <PackageLicenseUrl>https://mit-license.org/</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/CosmosProgramme/Extensions</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <Authors>AlexLEWIS</Authors>
+    <Company>StarrySky Foundation</Company>
+    <Version>0.0.1-alpha1-10220</Version>
+    <RootNamespace>Cosmos.Extensions.Html.HtmlAgilityPack</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net451' ">
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
+    <PackageReference Include="System.Diagnostics.TraceSource" Version="4.3.0" />
+    <PackageReference Include="System.Xml.XmlDocument" Version="4.3.0" />
+    <PackageReference Include="System.Xml.XPath" Version="4.3.0" />
+    <PackageReference Include="System.Xml.XPath.XmlDocument" Version="4.3.0" />
+    <PackageReference Include="System.Net.Http" Version="4.3.2" />
+  </ItemGroup>
+
+</Project>
